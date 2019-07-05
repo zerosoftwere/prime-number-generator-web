@@ -38,3 +38,6 @@ Example: `http://localhost:8000/primes?start=100&stop=20000&strategy=cd`
 ## Run server
 
 - `gradle bootrun` starts the application
+
+## Entries
+- `http://localhost:8000/records` returns list of entries in the server
