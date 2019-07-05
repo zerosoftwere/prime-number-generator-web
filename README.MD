@@ -2,7 +2,7 @@
 
 ## About
 
-Command line prime number generator
+Web based prime number generator
 
 ## Requirements
 
