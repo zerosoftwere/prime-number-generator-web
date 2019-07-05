@@ -1,6 +1,6 @@
 package me.xerosoft.controllers;
 
-import me.xerosoft.controllers.services.PrimeGeneratorService;
+import me.xerosoft.services.PrimeGeneratorService;
 import me.xerosoft.entity.PrimeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

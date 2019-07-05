@@ -1,4 +1,4 @@
-package me.xerosoft.controllers.repositories;
+package me.xerosoft.repositories;
 
 import me.xerosoft.entity.PrimeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

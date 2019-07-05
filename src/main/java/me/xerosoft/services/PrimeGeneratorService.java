@@ -1,6 +1,6 @@
-package me.xerosoft.controllers.services;
+package me.xerosoft.services;
 
-import me.xerosoft.controllers.repositories.PrimeGeneratorRepository;
+import me.xerosoft.repositories.PrimeGeneratorRepository;
 import me.xerosoft.domain.prime.PrimeNumberGenerator;
 import me.xerosoft.domain.prime.exceptions.PrimeStrategyException;
 import me.xerosoft.domain.prime.factory.PrimeNumberGeneratorFactory;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @Service
 public class PrimeGeneratorService {
