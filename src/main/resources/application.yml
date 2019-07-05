@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: prime-generator
+  datasource:
+    name: prime-genrator-db
+    url: jdbc:h2:mem:store
+    driver: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8000
