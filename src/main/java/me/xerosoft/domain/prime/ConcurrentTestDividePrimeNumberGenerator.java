@@ -9,8 +9,7 @@ public class ConcurrentTestDividePrimeNumberGenerator extends TestDividePrimeNum
 
     @Override
     public List<Integer> generate(int start, int end) throws IndexOutOfBoundsException {
-        if (start < 0) throw new IndexOutOfBoundsException();
-        else if (start < 2) { start = 2; }
+        if (start < 2) { start = 2; }
 
         return IntStream.range(start, end)
                 .parallel()

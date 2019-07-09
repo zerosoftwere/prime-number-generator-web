@@ -9,6 +9,7 @@ public class TestDividePrimeNumberGenerator implements PrimeNumberGenerator{
 
     @Override
     public List<Integer> generate(int start, int end) throws IndexOutOfBoundsException {
+
         return IntStream.range(start, end)
                 .filter(x -> x > 1)
                 .filter(x -> isPrime(x)).boxed()

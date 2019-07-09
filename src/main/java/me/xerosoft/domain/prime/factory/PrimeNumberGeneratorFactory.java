@@ -18,9 +18,6 @@ public class PrimeNumberGeneratorFactory {
             case "sv":
             case "sieve":
                 return new SievePrimeNumberGenerator();
-            case "sd":
-            case "sieve-divide":
-                return new SieveDividePrimeNumberGenerator();
             case "cd":
             case "concurrent-divide":
                 return new ConcurrentTestDividePrimeNumberGenerator();

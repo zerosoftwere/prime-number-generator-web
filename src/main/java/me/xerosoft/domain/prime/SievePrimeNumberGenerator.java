@@ -8,8 +8,6 @@ public class SievePrimeNumberGenerator implements PrimeNumberGenerator{
     private static final String STRATEGY = "Sieve";
 
     public List<Integer> generate(int start, int end) throws IndexOutOfBoundsException {
-        if (start < 0) throw new IndexOutOfBoundsException();
-
         BitSet primeBits = new BitSet();
 
         // a <= sqrt(n) and b <= sqrt(n) then ab <= n
