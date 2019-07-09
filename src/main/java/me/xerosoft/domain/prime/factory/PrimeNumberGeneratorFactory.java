@@ -22,6 +22,6 @@ public class PrimeNumberGeneratorFactory {
             case "concurrent-divide":
                 return new ConcurrentTestDividePrimeNumberGenerator();
         }
-        throw new PrimeStrategyException("Strategy not found");
+        throw new PrimeStrategyException("strategy not found");
     }
 }

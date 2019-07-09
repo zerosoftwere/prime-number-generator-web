@@ -3,6 +3,7 @@ package me.xerosoft.controllers;
 import me.xerosoft.domain.prime.exceptions.PrimeStrategyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -18,5 +19,10 @@ public class PrimeExceptionController {
     @ExceptionHandler(value = IndexOutOfBoundsException.class)
     public ResponseEntity<String> rangeException(IndexOutOfBoundsException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = MissingServletRequestParameterException.class)
+    public ResponseEntity<String> parameterException(MissingServletRequestParameterException ex) {
+        return new ResponseEntity<>("specify start and end query parameter", HttpStatus.BAD_REQUEST);
     }
 }
