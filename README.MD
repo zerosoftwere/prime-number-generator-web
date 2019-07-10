@@ -2,7 +2,7 @@
 
 ## About
 
-Web based prime number generator
+Web based prime numbers generator
 
 ## Requirements
 
@@ -27,11 +27,11 @@ Stop:
 
 Strategies:
 
-    -td  generates prime numbers using repeated divide
+    -td  generates prime numbers using repeated division
 
     -sv  generates prime numbers using sieve of eratosthenes
 
-    -cd  concurrent test-divide
+    -cd  concurrent td
 
 Example: `http://localhost:8000/primes?start=100&stop=20000&strategy=cd`
 
@@ -40,4 +40,5 @@ Example: `http://localhost:8000/primes?start=100&stop=20000&strategy=cd`
 - `gradle bootrun` starts the application
 
 ## Entries
-- `http://localhost:8000/records` returns list of entries in the server
+
+- `http://localhost:8000/records` returns list of successful queries in the server
