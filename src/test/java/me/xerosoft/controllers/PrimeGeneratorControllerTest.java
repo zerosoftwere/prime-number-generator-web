@@ -28,9 +28,6 @@ public class PrimeGeneratorControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @Before
-
-
     @Test
     public void shouldListPrimes() throws Exception {
         List<Integer> primes = Arrays.asList(2, 3, 5, 7);
