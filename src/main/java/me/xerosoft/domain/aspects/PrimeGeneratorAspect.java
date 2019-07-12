@@ -1,19 +1,16 @@
 package me.xerosoft.domain.aspects;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.Arrays;
-import java.util.logging.Logger;
 
 @Aspect
 @Configuration
 public class PrimeGeneratorAspect {
 
-    @Around("execution(* me.xerosoft.services.PrimeGeneratorService.generate(..))")
-    public Object verifyPrimeGeneratorInput(ProceedingJoinPoint jointPoint) throws Throwable{
+    @Before("execution(* me.xerosoft.services.PrimeGeneratorService.generate(..))")
+    public void verifyPrimeGeneratorInput(JoinPoint jointPoint) {
         int start = (Integer) jointPoint.getArgs()[1];
         int end = (Integer) jointPoint.getArgs()[2];
 
@@ -21,8 +18,5 @@ public class PrimeGeneratorAspect {
             String message = String.format("invalid range: %d to %d", start, end);
             throw new IndexOutOfBoundsException(message);
         }
-
-        Object result = jointPoint.proceed();
-        return result;
     }
 }
