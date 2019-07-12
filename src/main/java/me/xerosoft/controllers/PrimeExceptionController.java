@@ -25,4 +25,9 @@ public class PrimeExceptionController {
     public ResponseEntity<String> parameterException(MissingServletRequestParameterException ex) {
         return new ResponseEntity<>("specify start and end query parameter", HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(value = NumberFormatException.class)
+    public ResponseEntity<String> numberFormatException(NumberFormatException ex) {
+        return new ResponseEntity<>("invalid input number", HttpStatus.BAD_REQUEST);
+    }
 }
